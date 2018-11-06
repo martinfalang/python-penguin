@@ -68,7 +68,7 @@ def moveRandom(body):
 def chooseAction(body):
     action = PASS
     #action = moveTowardsCenterOfMap(body)
-    action = moveRandom()
+    action = moveRandom(body)
     return action
 
 env = os.environ
