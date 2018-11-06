@@ -60,9 +60,15 @@ def moveTowardsCenterOfMap(body):
     centerPointY = math.floor(body["mapHeight"] / 2)
     return moveTowardsPoint(body, centerPointX, centerPointY)
 
+def moveRandom(body):
+    posX = random.randint(0, body["mapWidth"])
+    posY = random.randint(0, body["mapHeight"])
+    return moveTowardsPoint(body, posX, posY)
+
 def chooseAction(body):
     action = PASS
-    action = moveTowardsCenterOfMap(body)
+    #action = moveTowardsCenterOfMap(body)
+    action = moveRandom()
     return action
 
 env = os.environ
